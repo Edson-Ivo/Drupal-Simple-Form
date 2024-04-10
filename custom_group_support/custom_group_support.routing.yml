@@ -1,0 +1,24 @@
+custom_group_support.form:
+  path: '/group/{group}/support'
+  defaults:
+    _form: '\Drupal\custom_group_support\Form\CustomGroupSupportForm'
+    _title: "Custom Group Support Link"
+  requirements:
+    _is_group_admin: 'TRUE'
+  options:
+    parameters:
+      group:
+        type: 'entity:group'
+
+custom_group_support.redirect_link:
+  path: '/group/{group}/support-redirect'
+  defaults:
+    _controller: '\Drupal\custom_group_support\Controller\CustomGroupSupportRedirect::redirectSupportLink'
+    _title: "Redirecting to Group Support..."
+  requirements:
+    _is_group_admin: 'TRUE'
+  options:
+    no_cache: 'TRUE'
+    parameters:
+      group:
+        type: 'entity:group'

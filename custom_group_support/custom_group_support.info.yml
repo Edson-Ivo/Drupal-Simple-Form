@@ -1,0 +1,6 @@
+name: 'Custom Group Support'
+type: module
+description: 'Create Custom Group Support link'
+core_version_requirement: ^8.8.0 || ^9 || ^10
+package: 'Custom'
+
